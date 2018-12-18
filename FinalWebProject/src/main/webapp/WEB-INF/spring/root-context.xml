@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxUploadSize" value="99999999999" />
+	</bean>
+	<bean id="userValidator" class="com.ishita.validators.UserValidator"></bean>
+	<bean id="userDao" class="com.ishita.dao.UserDAO" ></bean>
+	<bean id="placeValidator" class="com.ishita.validators.PlaceValidator"></bean>
+	<bean id="placeDao" class="com.ishita.dao.PlaceDAO" ></bean>
+	<bean id="tentryValidator" class="com.ishita.validators.TravellerValidator"></bean>
+	<bean id="tentryDao" class="com.ishita.dao.TravellerEntryDAO" ></bean>
+	<bean id="thDao" class="com.ishita.dao.TravellerHostRequestDAO" ></bean>
+	
+		<bean id="paymentValidator" class="com.ishita.validators.PaymentValidator"></bean>
+		<bean id="trValidator" class="com.ishita.validators.TravellerHostRequestValidator"></bean>
+	
+	
+		
+</beans>
